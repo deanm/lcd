@@ -71,3 +71,8 @@ dcd() {
   fi
   sed -i "/^$1,/ d" ~/.lcdrc
 }
+
+_compute_lcd_completion() {
+  COMPREPLY=( $( grep "^$2" ~/.lcdrc | cut -d, -f 1 ) )
+}
+complete -F _compute_lcd_completion lcd dcd
