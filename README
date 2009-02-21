@@ -1,0 +1,18 @@
+lcd - lazy change directory.  key => directory shortcut mappings.
+
+Add this to your bash .profile, it will define the following aliases:
+ - acd <key>: Add a mapping from the current directory to the key |key|.
+ - lcd <key>: Jump to the directory mapped with the key |key|.
+ - pcd: Print all key / directory mappings.
+ - dcd <key>: Delete a mapping.
+
+The mappings are stored in ~/.lcdrc.  This file will initially be created
+when you use the acd command.  lcd's biggest feature is it's simplicity, it
+is implemented in a few lines of bash, reusing existing fast tools.  The
+mapping file is very simple, easy to share / merge between machines, etc.
+
+Example usage:
+  $ cd /some/really/long/path/that/is/annoying/to/type
+  $ acd long  # Create a mapping from current directory to the key "long".
+  $ cd  # Change back to your home directory, or somewhere else.
+  $ pcd long  # Change to the really long annoying path.
