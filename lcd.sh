@@ -53,7 +53,7 @@ lcd() {
     echo "usage: lcd dirkey"
     return
   fi
-  THEDIR=`grep -m 1 "^$1," ~/.lcdrc | cut -d, -f 2-`
+  local THEDIR=`grep -m 1 "^$1," ~/.lcdrc | cut -d, -f 2-`
   if [ -z "$THEDIR" ]; then
     echo "lcd: \"$1\" is not a known directory key."
   else
