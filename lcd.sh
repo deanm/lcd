@@ -35,7 +35,7 @@
 #   $ cd /some/really/long/path/that/is/annoying/to/type
 #   $ acd long  # Create a mapping from current directory to the key "long".
 #   $ cd  # Change back to your home directory, or somewhere else.
-#   $ pcd long  # Change to the really long annoying path.
+#   $ lcd long  # Change to the really long annoying path.
 
 acd() {
   if [ -z "$1" ]; then
